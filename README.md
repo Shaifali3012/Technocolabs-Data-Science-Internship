@@ -15,5 +15,4 @@ Deployed Web Application: https://credit-card-default-shaifali.herokuapp.com/
 American Sign Language (ASL) is the primary language used by many deaf individuals in North America, and it is also used by hard-of-hearing and hearing individuals. The language is as rich as spoken languages and employs signs made with the hand, along with facial gestures and bodily postures. Our task was to build a Deep Learning Model to classify the Hand Signs into English alphabets. The model which we built can classify 10 Hand signs into their alphabets with 99% accuracy
 
 Deployed Web Application: https://asl-recognition-shaifali.herokuapp.com/
-
-Final Project Report:
+Final Project Report: TECHNOCOLABS DATA SCIENCE INTERNSHIP REPORT.pdf
