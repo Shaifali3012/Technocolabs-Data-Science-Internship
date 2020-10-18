@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>ASL Recognition with Deep Learning</title>
+<script>
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(600)
+                        .height(400);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+<link rel="stylesheet" type="text/css" href="../static/index.css" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="background-color: black !important;">
+<a href="{{ url_for('index') }}" style="color: white;font-size: 25px;">ASL Recognition with Deep Learnin</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+<a href="https://github.com/Shaifali3012/Technocolabs-Data-Science-Internship/tree/master/Final%20Project" target="_blank" class="nav-link"><span style="font-size: 20px;" class="fa fa-github"></span>&nbsp;Project Github</a>
+</li>
+<li class="nav-item active">
+<a href="https://linkedin.com/in/shaifaligupta3012" target="_blank" class="nav-link"><span style="font-size: 20px;" class="fa fa-linkedin"></span>&nbsp;LinkedIn</a>
+</li>
+<li class="nav-item active">
+<a href="https://github.com/Shaifali3012" target="_blank" class="nav-link"><span style="font-size: 20px;" class="fa fa-github"></span>&nbsp;My Github</a>
+</li>
+</ul>
+</div>
+</nav>
+           
+<center>
+
+{% if message %}
+    <br>
+    <div class="alert alert-danger">
+    <center><strong style="color: red;">{{ message }}</strong></center>
+    </div>
+{% endif %}
+
+{% if pred %}
+<div class="alert alert-success">
+    <center><strong style="color: green;">The predicted Alphabet is {{ pred }}</strong></center>
+</div>
+{% endif %}
+<br>
+
+
+<div id="data">
+        <center><h1>ASL Prediction </h1></center>
+            <p>American Sign Language (ASL) is the primary language used by many deaf <br>individuals in North America, and it is also used by hard-of-hearing and hearing individuals. <br>The language is as rich as spoken languages and employs signs made with the hand, along with facial gestures and bodily postures.</p>
+            
+			<div id="data1">
+			
+			<h3>Project Tasks</h3>
+            <ol>
+                <li>Examine the dataset</li>
+                <li>One-hot encode the data</li>
+                <li>Define the model</li>
+                <li>Compile the model</li>
+                <li>Train the model</li>
+                <li>Test the model</li>
+                <li>Visualize mistakes</li>
+            </ol>
+			</div>
+			
+		<!--	<div id="data2">
+			<form  class="form-horizontal" method="POST" enctype="multipart/form-data">
+		<input  class="but" class="btn btn-block btn-info" onchange="readURL(this);" type="file" name="image" placeholder="Upload Image">
+			
+			<input class="but"  type="submit" value="Predict">
+			
+			</form>
+			</div> -->
+		
+
+<form class="form-horizontal" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top:10px;">
+                        <input class="btn btn-block btn-info" onchange="readURL(this);" type="file" name="image" placeholder="Upload Image">
+                    </div>
+                    <div class="col-md-6" style="margin-top:10px;">
+                        <input type="submit" class="btn btn-primary btn-block" value="Predict">
+                    </div>
+                </div>
+            </form>
+		
+    </div>
+
+<div id="data3">
+
+<center><p style="color: white;font-size: 17px;font-weight: bold;margin-top: 8px;">Made by Shaifali Gupta</p></center>
+<center><p style="color: white;font-size: 17px;font-weight: bold;margin-top: 1px;"><span style="color:red">&#10084;</span>Data Science Internship At TECHNOCOLABS<span style="color:red">&#10084;</span></p></center>
+
+
+</div>
+</center>
+</body>
+
+</html>
